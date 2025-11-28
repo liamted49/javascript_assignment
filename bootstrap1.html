@@ -78,6 +78,45 @@
 
 </html>
 
-<!--Question: What will happen if I change the column class 
-from col-md-6 to: col-lg-6 col-sm-6 
-Describe the different between using "col-md-6", "col-lg-6", and "col-sm-6", what are their impact to the column with brief analysis.-->
+
+<!--
+Question:
+What will happen if I change the column class from col-md-6 to:
+col-lg-6
+col-sm-6
+
+Describe the difference between using "col-md-6", "col-lg-6", and "col-sm-6",
+what are their impacts on the column with brief analysis.
+
+Answer:
+
+Bootstrap column classes define when a column becomes 6 units wide (half width)
+based on screen size breakpoints.
+
+1. col-sm-6
+   - Breakpoint starts at ≥ 576px.
+   - Columns will appear side-by-side on small screens and larger.
+   - Only extra-small screens (<576px) will stack vertically.
+   - Result: More horizontal layout on most devices.
+
+2. col-md-6
+   - Breakpoint starts at ≥ 768px.
+   - Columns appear side-by-side only on medium screens and larger.
+   - On small devices (<768px), columns stack vertically.
+   - Result: More balanced and commonly used for responsive layouts.
+
+3. col-lg-6
+   - Breakpoint starts at ≥ 992px.
+   - Columns appear side-by-side only on large screens (laptops/desktops).
+   - On medium and small screens (<992px), columns stack vertically.
+   - Result: Requires a larger screen to show the 2-column layout.
+
+Summary:
+- col-sm-6 → side-by-side earliest (small devices and up)
+- col-md-6 → side-by-side on medium devices and up
+- col-lg-6 → side-by-side only on large devices and up
+
+Their impact:
+Changing the class controls at which screen size the layout switches
+from stacked (1 column) to side-by-side (2 columns).
+-->
